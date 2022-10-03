@@ -4,7 +4,7 @@ public class Product {
 	
 	private Integer productId;
 	private String channel;
-	private Integer port;
+	private String port;
 	
 	
 	public int getProductId() {
@@ -19,11 +19,11 @@ public class Product {
 	public void setChannel(String channel) {
 		this.channel = channel;
 	}
-	public Integer getPort() {
+	public String getPort() {
 		return port;
 	}
-	public void setPort(Integer integer) {
-		this.port = integer;
+	public void setPort(String string) {
+		this.port = string;
 	}
 	
 	
