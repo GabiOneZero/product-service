@@ -1,4 +1,4 @@
-package com.nttdata.bootcamp.productservice.configuration.service;
+package com.nttdata.bootcamp.productservice.service;
 
 import com.nttdata.bootcamp.productservice.dto.Product;
 

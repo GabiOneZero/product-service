@@ -5,6 +5,7 @@ public class Product {
 	private Integer productId;
 	private String channel;
 	private String port;
+	private String value;
 	
 	
 	public int getProductId() {
@@ -24,6 +25,12 @@ public class Product {
 	}
 	public void setPort(String string) {
 		this.port = string;
+	}
+	public String getValue() {
+		return value;
+	}
+	public void setValue(String value) {
+		this.value = value;
 	}
 	
 	
