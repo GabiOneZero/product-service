@@ -2,14 +2,14 @@ package com.nttdata.bootcamp.productservice.dto;
 
 public class Product {
 	
-	private int productId;
+	private Integer productId;
 	private String channel;
 	
 	
 	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(int productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 	public String getChannel() {
