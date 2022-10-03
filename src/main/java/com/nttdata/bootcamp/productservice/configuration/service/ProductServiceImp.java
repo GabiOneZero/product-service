@@ -9,20 +9,20 @@ import org.springframework.web.context.annotation.RequestScope;
 
 import com.nttdata.bootcamp.productservice.dto.Product;
 
-@RequestScope
 @Service
 public class ProductServiceImp implements ProductServiceI {
 	
 	
-	@Value("${server.port}")
-	private int port;
+	@Autowired
+	Environment environment;
 
 	@Override
 	public Product getProduct(Integer id) {
 		Product product = new Product();
 		product.setProductId(id);
 		product.setChannel("GET");
-		product.setPort(port);
+		//product.setPort(Integer.parseInt(port));
+		product.setPort(environment.getProperty("local.server.port"));
 		return product;
 	}
 	
@@ -31,7 +31,8 @@ public class ProductServiceImp implements ProductServiceI {
 		Product product = new Product();
 		product.setProductId(id);
 		product.setChannel("POST");
-		product.setPort(port);
+		//product.setPort(Integer.parseInt(port));
+		product.setPort(environment.getProperty("local.server.port"));
 		return product;
 	}
 
