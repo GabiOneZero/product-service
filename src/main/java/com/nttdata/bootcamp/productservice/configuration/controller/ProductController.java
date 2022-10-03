@@ -1,5 +1,6 @@
 package com.nttdata.bootcamp.productservice.configuration.controller;
 
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,19 +21,23 @@ public class ProductController {
 		Product result = product.getProduct(id);
 		
 		// Respuesta.
-		final ProductServiceImp responseBody = product;
-		System.out.println(responseBody);
+		System.out.println(result.getProductId());
 
 		return result;
 	}
 	
-	/*
-	 * @PostMapping("/{id}") public String postProduct() {
-	 * 
-	 * final String responseBody = "/"; System.out.println(responseBody);
-	 * 
-	 * return responseBody; }
-	 */
+	
+	@PostMapping("/{id}")
+	public Product postProduct(@PathVariable Integer id) {
+		
+		ProductServiceImp product = new ProductServiceImp();
+		Product result = product.postProduct(id);
+		
+		// Respuesta.
+		System.out.println(result.getProductId());
+
+		return result;
+	}
 
 
 }
